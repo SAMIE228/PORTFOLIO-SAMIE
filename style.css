@@ -1,0 +1,104 @@
+/******************BARE DE NAVIGATION*****************/
+nav{
+    background-color: rgb(46, 121, 219);
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+}
+ul{
+    padding: 0px;
+    margin: 0px;
+}
+li{
+    list-style-type: none;
+    display: inline-block;
+}
+header li a{ 
+    color: white;
+    padding: 18px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+.logo{
+    float: left;
+}
+.menu{
+    float: right;
+}
+/********************IMAGE PRINCIPALE*******************/
+
+#imageprincipale{
+background-image: url(/Media/photo\ couverture.jpeg);
+background-size: cover;
+padding-top: 60px;
+height: 799px;
+}
+.titreprincipale{
+    text-align: center;
+    margin-top: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    color: rgb(46, 121, 219);
+    text-shadow: 1px 2px 3px rgb(46, 121, 219);
+}
+.premiertrait{
+    width: 25%;
+    height: 10px;
+    background-color: rgb(46, 121, 219);
+    margin: -13px  auto;
+}
+.soustitre{
+    text-align: center;
+    color: white;
+    margin-top: 270px;
+    font-size: 1.5em;
+    text-shadow: 1px 2px 3px rgb(46, 121, 219);
+}
+/*******************BIOGRAPHIE****************/
+
+.bio{
+    position: relative;
+    height: 600px;
+    margin-top: 50px;
+}
+.parentbox{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 580px;
+   
+}
+.boxbleue{
+    
+    width: 40%;
+    width: 580px;
+    background-color: rgb(46, 121, 219);
+}
+.boxtexte{
+    width: 60%;
+    height: 580px;
+    background-color: aliceblue;
+    text-align: left;
+}
+.descriptionbio{
+    margin-left: 250px;
+    margin-top: 50px;
+}
+h1 ::before{
+    width: 50px;
+    height: 2px;
+    background-color:rgb(46, 121, 219) ;
+}
+.boximg{
+    position: absolute;
+    width: 25%;
+    height: 500px;
+    border-radius: 10px;
+    margin-left: 389px;
+    margin-top: 35px;
+    background-image: url(/Media/photo_profil.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 8px black;
+}
