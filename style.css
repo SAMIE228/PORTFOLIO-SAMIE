@@ -1,11 +1,7 @@
 /****************** BARE DE NAVIGATION *****************/
-@font-face {
-    font-family: Poppins, serif;
-    src: url("/Poppins/Poppins-Regular.ttf");
-}
+
 *{
     scroll-behavior: smooth;
-    /* font-family: Poppins, serif; */
     font-family: Poppins, serif;
 }
 nav{
@@ -48,7 +44,6 @@ nav ul li a:hover {
 }
 @media (max-width: 800px ){
     .menu{ 
-        color: red;
         display: block;
         float: none;
     }
