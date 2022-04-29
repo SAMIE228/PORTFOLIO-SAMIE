@@ -56,7 +56,7 @@ nav ul li a:hover {
 /******************** IMAGE PRINCIPALE *******************/
 
 #imageprincipale{
-background-image: linear-gradient(to top, #00000027, #000000e7) ,url(/Media/photo_couverture.jpeg);
+background-image: linear-gradient(to top, #00000027, #000000e7) ,url(Media/photo_couverture.jpeg);
 background-size: cover;
 padding-top: 60px;
 height: 799px;
