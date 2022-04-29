@@ -1,4 +1,13 @@
-/******************BARE DE NAVIGATION*****************/
+/****************** BARE DE NAVIGATION *****************/
+@font-face {
+    font-family: Poppins, serif;
+    src: url("/Poppins/Poppins-Regular.ttf");
+}
+*{
+    scroll-behavior: smooth;
+    /* font-family: Poppins, serif; */
+    font-family: Poppins, serif;
+}
 nav{
     background-color: rgb(46, 121, 219);
     width: 100%;
@@ -14,12 +23,22 @@ li{
     display: inline-block;
 }
 header li a{ 
-    color: white;
-    padding: 18px 16px;
+    color: rgb(46, 121, 219);
+    padding: 5px 16px;
     text-decoration: none;
     display: block;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 10px ;
+    background-color: aliceblue;
+    transition: .3s;
+}
+nav ul li a:hover {
+    color: aliceblue;
+    background-color: rgb(46, 121, 219);
+    transform: scale(1.1);
 }
 .logo{
     float: left;
@@ -27,73 +46,95 @@ header li a{
 .menu{
     float: right;
 }
-/********************IMAGE PRINCIPALE*******************/
+@media (max-width: 800px ){
+    .menu{ 
+        color: red;
+        display: block;
+        float: none;
+    }
+    .logo{
+        float: none;
+        display: block;
+    }
+    }
+
+/******************** IMAGE PRINCIPALE *******************/
 
 #imageprincipale{
-background-image: url(/Media/photo\ couverture.jpeg);
+background-image: linear-gradient(to top, #00000027, #000000e7) ,url(/Media/photo_couverture.jpeg);
 background-size: cover;
 padding-top: 60px;
 height: 799px;
 }
 .titreprincipale{
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-top: 100px;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 2em;
-    color: rgb(46, 121, 219);
-    text-shadow: 1px 2px 3px rgb(46, 121, 219);
+    color: white;
+    font-size: 3em;
+    margin-top: 30px;
+    text-shadow: 1px 3px 2px black;
 }
 .premiertrait{
     width: 25%;
     height: 10px;
-    background-color: rgb(46, 121, 219);
+    background-color: white;
     margin: -13px  auto;
+    box-shadow: 3px 3px 2px rgb(46, 121, 219);
 }
 .soustitre{
+    font-family: "dancing script",cursive;
     text-align: center;
     color: white;
-    margin-top: 270px;
-    font-size: 1.5em;
-    text-shadow: 1px 2px 3px rgb(46, 121, 219);
+    margin-top: 70px;
+    font-size: 2em;
 }
-/*******************BIOGRAPHIE****************/
-
+@media (max-width: 800px){
+    #imageprincipale{
+        background-size: center  ;
+        background-position: 50%;
+    }
+}
+/******************* BIOGRAPHIE ****************/
+@media (min-width: 801px){
 .bio{
     height: 600px;
     margin-top: 50px;
+    
 }
 .parentbox{
     display: flex;
-    position: absolute;
     width: 100%;
     height: 580px;
-   
 }
 .boxbleue{
-    
     width: 40%;
     width: 580px;
     background-color: rgb(46, 121, 219);
 }
 .boxtexte{
-    width: 60%;
+    width: 67%;
     height: 580px;
     background-color: aliceblue;
     text-align: left;
+   
 }
 .descriptionbio{
-    margin-left: 200px;
-    margin-top: 10px;
+    margin-left: 400px;
+    margin-top: 40px;
+    width: 500px;
+    height: 400px;
     padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, .2);
+    
+}
+.sp{
+    color:rgb(46, 121, 219);
 }
 p{
     font-size: 20px;
     text-align: justify;
-}
-h1 ::before{
-    width: 50px;
-    height: 2px;
-    background-color:rgb(46, 121, 219) ;
+    
 }
 .boximg{
     position: absolute;
@@ -106,7 +147,42 @@ h1 ::before{
     background-size: cover;
     box-shadow: 5px 5px 8px black;
 }
-/***********************COMPETENCE TECHNIQUE****************/
+}
+@media (max-width: 800px){
+   .parentbox{
+    flex-direction: column;
+   }
+   .bio{
+    height: 100%; 
+}
+
+.boxbleue{
+    
+}
+.boxtexte{
+    width: 100%;
+    background-color: aliceblue;
+    text-align: left;
+}
+.boximg{
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    margin-left: 0px;
+    margin-top: 35px;
+    background-image: url(/Media/photo_profil.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 8px black;
+}
+.descriptionbio{
+    margin-top: 40px;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, .2);  
+}
+}
+
+/*********************** COMPETENCE TECHNIQUE ****************/
 
 #ct{
     text-align: center;
@@ -122,40 +198,314 @@ h1 ::before{
 .conteneurct{
     display: flex;
     width: 60%;
-    margin:30px  auto;  
+    margin:0px  auto;  
+    padding: 20px;
+    justify-content: space-between;
+    
 }
 .module{
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
     background-color: rgb(255, 123, 0);
     border-radius: 10px;
     box-shadow: 2px 2px 4px black;
     object-fit: cover;
+    object-position: center;
+    transition: .3s;
+    
+}
+.module:hover {
+    transform: scale(1.3);
 }
 img{
-    width: 180px;
+    width: 100px;
     align-items: center;
 }
 .matière{
-    width: 532px;
-    height: 180px;
+    width: 692px;
+    height: 100px;
     border-radius: 10px;
     display: grid;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
+    font-size: 2em;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .niveau{
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
     background-color:rgb(46, 121, 219);
     border-radius: 50%;
     box-shadow: 2px 2px 4px 2px black;
     align-items: center;
     display: grid;
     justify-content: center;
-    font-size: 3em;
+    font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    transition: .3s;
 }
+.niveau:hover {
+    transform: scale(1.3);
+ }
+ @media (max-width: 800px){
+    .conteneurct{
+     flex-direction: column; 
+     align-items: center;
+    }
+    .matière{
+        display: none;
+    }
+ }
+/********************* Mes Projets ******************/
+
+#mp{
+    text-align: center;
+    color: aliceblue;
+    background-color: rgb(46, 121, 219);
+    padding: 20px;
+    
+}
+#MesProjets{
+    background-color: aliceblue;
+    box-sizing: border-box;
+    padding-top: 0px;
+}
+
+.projet{
+    display: grid;
+    padding: 0 10px 30px 10px;
+    grid-template-columns: repeat( auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px 40px;
+}
+.projet-items{
+display: grid;
+position: relative;
+grid-template-rows: auto 1fr;
+border-radius: 15px;
+box-shadow: 0px 15px 50px rgba(0, 0, 0, .2);
+}
+.projet-items img{
+position: relative;
+width: 100%;
+border-radius: 15px 15px 0 0;
+}
+.detail{
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+    padding: 20px 10px;
+}
+.detail-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.detail-sub h3{
+    font-weight: 600;
+    font-size: 18px;
+    color: rgb(46, 121, 219);
+}
+.price{
+  text-align: right;  
+}
+.detail p{
+    color: #6f6f6f;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 28px;
+    align-self: stretch;
+}
+.detail button{
+    background-color: rgb(46, 121, 219);
+    color: aliceblue;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 180px;
+
+}
+
+
+/*********************** Experience proff *****************/
+
+.expertise{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin: 20px;
+    
+}
+.poste{
+    flex-basis: 45%;
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, .2);
+   
+}
+.intitulé{
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, .2);
+    padding: 30px;  
+    
+}
+.photo{
+    flex-basis: 45%;
+    background-image: url(/Media/photo_profil.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0px 15px 50px rgba(0, 0, 0, .2);
+    
+}
+@media (max-width: 800px){
+    .expertise{
+     flex-direction: column; 
+     margin: 0px;
+    }
+    .poste{
+        order: 2;
+    }
+    .photo{
+        order: 1;
+    }
+ }
+
+/********************** Contactez Nous *****************/
+
+#Contact{
+    background-color: rgb(46, 121, 219);
+}
+.contact{
+    display: flex;
+    width: 100%;
+    background-color: rgb(46, 121, 219);
+    justify-content: space-around;
+ }
+ .adresse{
+     flex: 0 1 45%;
+     color: aliceblue;
+     margin-top: 27px;
+     height: 600px;
+ }
+ .info{
+     width: 100%;
+     height: 500px;
+     border-radius: 20px;
+     box-shadow: 0px 15px 50px rgba(0, 0, 0, .2);
+     padding: 0px;
+ }
+ .hum{
+     padding: 50px;
+ }
+ .hum h3{
+     text-decoration: underline;
+     color: rgb(255, 217, 0);
+ }
+ .formulaire{
+    flex: 0 1 45%;
+     margin-top: 27px;
+ }
+ .area{
+     width: 100%;
+     height: 500px;
+     border-radius: 20px;
+     box-shadow: 0px 15px 50px rgba(0, 0, 0, .2);
+ }
+ .ayo{
+     padding: 50px;
+     text-align: center;
+ }
+ .tel{
+     text-align: center;
+     color: aliceblue;
+ }
+ form{
+     margin: 0 auto;
+     max-width: 900px;
+     min-height: 280px;
+ }
+ input, textarea, footer button{
+    border: none;
+    width: 65%;
+    padding: 15px 10px;
+    margin: 1px;
+    font-size: 1,2em;
+    border-radius: 8px;
+ }
+ textarea{
+     height: 120px;
+ }
+ footer button{
+     font-size: 1.3em;
+     color: rgb(46, 121, 219);
+     background-color: aliceblue;
+ }
+ footer button:hover{
+     border: 2px solid white;
+     background-color:rgb(5, 62, 136) ;
+     color: white;
+ }
+
+ .trait{
+     height: 1px;
+     width: 75%;
+     background-color: aliceblue;
+     margin: 30px auto;
+ }
+ @media ( max-width: 800px ){
+     .contact{
+         flex-direction: column;
+     }
+    
+ }
+ /****************** Copyright et icon***************/
+
+ .copyrighticon{
+     display: flex;
+     background-color: rgb(46, 121, 219);
+ }
+ .copyright{
+    width: 50%;
+    text-align: left;
+    color: aliceblue;
+    margin-left: 10%;
+    margin-bottom: 15px;
+ }
+ .icon{
+     width: 50%;
+     text-align: right;
+     margin-right: 10%;
+     margin-bottom: 15px;
+ }
+ .icon a {
+     display: inline-block;
+     font-size: 1.5em;
+     padding: 0px 15px;
+     color: aliceblue;
+    transition: all 2s;
+ }
+ .icon a :hover{
+    transform: scale(1.5);
+ }
+ @media (max-width: 800px){
+    .copyrighticon{
+     flex-direction: column; 
+     align-items: center;
+    }
+.copyright{
+    order: 2;
+    width: auto;
+    margin-left: 0px;
+    text-align: center;
+}
+.icon{
+    order: 1;
+    width: auto;
+    margin: 0px;
+}
+.copyright{
+    font-size: 10px;
+    margin-bottom: 13px;
+}
+ }
